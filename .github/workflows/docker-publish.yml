@@ -87,11 +87,11 @@ jobs:
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-      - name: Get latest tag
+      - name: Get latest tag or fallback to 'main'
         id: get_tag
-        uses: oprypin/find-latest-tag@v1
-        with:
-          repository: ${{ github.repository }}
+        run: |
+          TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "main")
+          echo "tag=$TAG" >> $GITHUB_OUTPUT
 
       - name: Deploy to Azure App Service
         uses: azure/webapps-deploy@v2
