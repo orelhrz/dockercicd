@@ -5,6 +5,8 @@ using WeatherForecastApp.Models;
 
 namespace WeatherForecastApp.Controllers
 {
+
+
     [ApiController]
     [Route("[controller]")]
     public class WeatherForecastController : ControllerBase
@@ -22,20 +24,11 @@ namespace WeatherForecastApp.Controllers
 
 
         [HttpGet]
-        public virtual async Task<IEnumerable<WeatherForecast>> Get()
+        public virtual async Task<string> Get()
         {
-            await Task.Yield();
-            var forecasts = new WeatherForecast[5];
-            for (var i = 0; i < 5; i++)
-            {
-                forecasts[i] = new WeatherForecast
-                {
-                    Date = DateTime.Now.AddDays(i),
-                    TemperatureC = Random.Shared.Next(-20, 55),
-                    Summary = Summaries[Random.Shared.Next(Summaries.Length)]
-                };
-            }
-            return forecasts;
+
+
+            return "Hello World";
         }
     }
 }
