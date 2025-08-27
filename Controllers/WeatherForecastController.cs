@@ -24,7 +24,7 @@ namespace WeatherForecastApp.Controllers
         [HttpGet("version")]
         public ActionResult<string> GetVersion()
         {
-            var version = config["ApiVersion"] ?? "1.0.0";
+            var version = config["ApiVersion"] ?? "1.0.1";
             return Ok(version);
         }
 
