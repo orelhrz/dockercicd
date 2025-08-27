@@ -11,8 +11,7 @@ namespace WeatherForecastApp
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
-                    webBuilder.UseUrls("http://localhost:8080");
-                    webBuilder.UseStartup<Startup>();
+                   webBuilder.UseStartup<Startup>();
                 });
     }
 }
