@@ -21,14 +21,19 @@ namespace WeatherForecastApp.Controllers
         {
             this.config = config;
         }
-
+        [HttpGet("version")]
+        public ActionResult<string> GetVersion()
+        {
+            var version = config["ApiVersion"] ?? "1.0.0";
+            return Ok(version);
+        }
 
         [HttpGet]
-        public virtual async Task<string> Get()
+        public virtual IEnumerable<string> Get()
         {
-
-
-            return "Hello World";
+            return Summaries;
         }
+
+
     }
 }
