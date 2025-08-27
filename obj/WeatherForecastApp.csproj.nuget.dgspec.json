@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\OR20509471\\Downloads\\demo\\dockercicd\\WeatherForecastApp.csproj": {}
+    "C:\\Users\\OR20509471\\Downloads\\demo\\dockercicd\\WeatherForecastApp.csproj": {}
   },
   "projects": {
-    "c:\\Users\\OR20509471\\Downloads\\demo\\dockercicd\\WeatherForecastApp.csproj": {
+    "C:\\Users\\OR20509471\\Downloads\\demo\\dockercicd\\WeatherForecastApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\OR20509471\\Downloads\\demo\\dockercicd\\WeatherForecastApp.csproj",
+        "projectUniqueName": "C:\\Users\\OR20509471\\Downloads\\demo\\dockercicd\\WeatherForecastApp.csproj",
         "projectName": "WeatherForecastApp",
-        "projectPath": "c:\\Users\\OR20509471\\Downloads\\demo\\dockercicd\\WeatherForecastApp.csproj",
+        "projectPath": "C:\\Users\\OR20509471\\Downloads\\demo\\dockercicd\\WeatherForecastApp.csproj",
         "packagesPath": "C:\\Users\\OR20509471\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\OR20509471\\Downloads\\demo\\dockercicd\\obj\\",
+        "outputPath": "C:\\Users\\OR20509471\\Downloads\\demo\\dockercicd\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\OR20509471\\AppData\\Roaming\\NuGet\\NuGet.Config"
