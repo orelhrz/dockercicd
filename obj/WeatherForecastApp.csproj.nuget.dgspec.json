@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\OR20509471\\Downloads\\demo\\dockercicd\\WeatherForecastApp.csproj": {}
+    "/workspaces/dockercicd/WeatherForecastApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\OR20509471\\Downloads\\demo\\dockercicd\\WeatherForecastApp.csproj": {
+    "/workspaces/dockercicd/WeatherForecastApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\OR20509471\\Downloads\\demo\\dockercicd\\WeatherForecastApp.csproj",
+        "projectUniqueName": "/workspaces/dockercicd/WeatherForecastApp.csproj",
         "projectName": "WeatherForecastApp",
-        "projectPath": "C:\\Users\\OR20509471\\Downloads\\demo\\dockercicd\\WeatherForecastApp.csproj",
-        "packagesPath": "C:\\Users\\OR20509471\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\OR20509471\\Downloads\\demo\\dockercicd\\obj\\",
+        "projectPath": "/workspaces/dockercicd/WeatherForecastApp.csproj",
+        "packagesPath": "/home/codespace/.nuget/packages/",
+        "outputPath": "/workspaces/dockercicd/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\OR20509471\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/home/codespace/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -79,7 +79,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Users\\OR20509471\\env\\dotnet-sdk-8.0.409-win-x64\\sdk\\8.0.409/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.412/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
