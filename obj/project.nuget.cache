@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "RJSiunzqgxc=",
+  "dgSpecHash": "cLw8Phpxaj4=",
   "success": true,
-  "projectFilePath": "C:\\Users\\OR20509471\\Downloads\\demo\\dockercicd\\WeatherForecastApp\\WeatherForecastApp.csproj",
+  "projectFilePath": "c:\\Users\\OR20509471\\Downloads\\demo\\dockercicd\\WeatherForecastApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\OR20509471\\.nuget\\packages\\castle.core\\5.1.0\\castle.core.5.1.0.nupkg.sha512",
     "C:\\Users\\OR20509471\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\8.0.0\\microsoft.aspnetcore.jsonpatch.8.0.0.nupkg.sha512",

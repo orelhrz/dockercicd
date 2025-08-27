@@ -5180,11 +5180,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\OR20509471\\Downloads\\demo\\dockercicd\\WeatherForecastApp\\WeatherForecastApp.csproj",
+      "projectUniqueName": "c:\\Users\\OR20509471\\Downloads\\demo\\dockercicd\\WeatherForecastApp.csproj",
       "projectName": "WeatherForecastApp",
-      "projectPath": "C:\\Users\\OR20509471\\Downloads\\demo\\dockercicd\\WeatherForecastApp\\WeatherForecastApp.csproj",
+      "projectPath": "c:\\Users\\OR20509471\\Downloads\\demo\\dockercicd\\WeatherForecastApp.csproj",
       "packagesPath": "C:\\Users\\OR20509471\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\OR20509471\\Downloads\\demo\\dockercicd\\WeatherForecastApp\\obj\\",
+      "outputPath": "c:\\Users\\OR20509471\\Downloads\\demo\\dockercicd\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\OR20509471\\AppData\\Roaming\\NuGet\\NuGet.Config"
