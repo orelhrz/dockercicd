@@ -1,24 +1,15 @@
 # Stage 1: Restore and build
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
-WORKDIR /app
-
-# Copy csproj and restore as distinct layers
-COPY WeatherForecastApp.csproj ./
+WORKDIR /src
+COPY . .
 RUN dotnet restore WeatherForecastApp.csproj
+RUN dotnet build WeatherForecastApp.csproj -c Release --no-restore
+RUN dotnet publish WeatherForecastApp.csproj -c Release -o /app/publish --no-build
 
-# Copy everything else and build
-COPY . ./
-RUN dotnet publish WeatherForecastApp.csproj -c Release -o out
-
-# Stage 2: Runtime image
+# Stage 2: Runtime
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS final
 WORKDIR /app
-COPY --from=build /app/out ./
-
-# Expose port 8080
+COPY --from=build /app/publish .
 EXPOSE 8080
-
-# Set environment variable for ASP.NET Core to listen on port 8080
 ENV ASPNETCORE_URLS=http://+:8080
-
 ENTRYPOINT ["dotnet", "WeatherForecastApp.dll"]
