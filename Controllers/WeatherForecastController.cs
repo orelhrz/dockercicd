@@ -13,7 +13,7 @@ namespace WeatherForecastApp.Controllers
     {
         private static readonly string[] Summaries = new[]
         {
-            "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
+            "DEMO", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
         };
         private IConfiguration config;
 
@@ -24,7 +24,7 @@ namespace WeatherForecastApp.Controllers
         [HttpGet("version")]
         public ActionResult<string> GetVersion()
         {
-            var version = config["ApiVersion"] ?? "1.0.3";
+            var version = config["ApiVersion"] ?? "1.0.4";
             return Ok(version);
         }
 
