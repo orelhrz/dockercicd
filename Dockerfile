@@ -15,7 +15,8 @@ FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS final
 WORKDIR /app
 COPY --from=build /app/out ./
 
+# Expose port 8080
 EXPOSE 8080
-ENV ASPNETCORE_URLS=http://+:8080
 
-ENTRYPOINT ["dotnet", "WeatherForecastApp.dll"]
+# Set environment variable for ASP.NET Core to listen on port 8080
+ENV ASPNETCORE_URLS=http://+
