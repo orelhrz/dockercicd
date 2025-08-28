@@ -2,4 +2,4 @@ Can you create a Dockerfile for an ASP.NET Core app using .NET 8 with multi-stag
 export port 8080
 
 
-Generate a GitHub Actions workflow for building and deploying a Dockerized ASP.NET app to Azure. Use multi-stage builds, push to ACR, and deploy to Azure App Service. Include secrets like REGISTRY_USER, REGISTRY_PASSWORD, and AZURE_CREDENTIALS, and use environments named registry and production.
+Generate a GitHub Actions workflow for building and deploying a Dockerized ASP.NET app to Azure. Use multi-stage builds, push to ACR, and deploy to Azure App Service. Include secrets like REGISTRY_URL, REGISTRY_USER, REGISTRY_PASSWORD, and AZURE_CREDENTIALS, and use environments named registry and production. Image name should be ${{ github.repository }} and use main as a tag 

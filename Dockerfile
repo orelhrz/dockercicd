@@ -1,22 +1,21 @@
-# Use the ASP.NET runtime image as the base image for the final stage.
-FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
-WORKDIR /app
-EXPOSE 8080
-
-# Use the .NET SDK image to build the application.
+# Stage 1: Restore and build
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
-WORKDIR /src
-COPY ["WeatherForecastApp.csproj", "./"]
-RUN dotnet restore "WeatherForecastApp.csproj"
-COPY . .
-RUN dotnet build "WeatherForecastApp.csproj" -c Release -o /app/build
-
-# Publish the application.
-FROM build AS publish
-RUN dotnet publish "WeatherForecastApp.csproj" -c Release -o /app/publish
-
-# Copy the published output to the final runtime image.
-FROM base AS final
 WORKDIR /app
-COPY --from=publish /app/publish .
+
+# Copy csproj and restore as distinct layers
+COPY WeatherForecastApp.csproj ./
+RUN dotnet restore WeatherForecastApp.csproj
+
+# Copy everything else and build
+COPY . ./
+RUN dotnet publish WeatherForecastApp.csproj -c Release -o out
+
+# Stage 2: Runtime image
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS final
+WORKDIR /app
+COPY --from=build /app/out ./
+
+EXPOSE 8080
+ENV ASPNETCORE_URLS=http://+:8080
+
 ENTRYPOINT ["dotnet", "WeatherForecastApp.dll"]
